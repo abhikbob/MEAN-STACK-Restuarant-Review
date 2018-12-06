@@ -1,0 +1,190 @@
+﻿<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="../js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+
+
+<style>
+
+    .det{
+        background-color: rgb(33, 33, 33);
+    }
+
+   
+    .textbox
+    {
+        width:50%;
+        margin-left:8%;
+        border:2px solid lightblue;
+       
+    }
+
+    .post{
+        background-color: darkblue;
+    }
+
+    .button{
+        margin-left:8%;
+        background-color: darkblue;
+        width:4em;
+        padding:12px;
+        font-size:2em;
+
+    }
+
+    table
+    {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(33, 33, 33);
+        color: #FFD700;
+        text-align: center;
+        border: none;
+        opacity: 0.8;
+    filter: alpha(opacity=80);
+    }
+
+   
+    td{
+        font-family: 'Charmonman', cursive;
+        font-size:20px;
+    }
+
+    .list-group-item{
+        color: #FFD700;
+        background-color: rgb(33, 33, 33);
+        font-size: 1.5em;
+    }
+
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.post
+{
+    margin-left:50%;
+    background-color: darkblue;
+        width:4em;
+        padding:12px;
+        font-size:2em;
+
+}
+
+.textbox{
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+border: none;
+font-size:30px;
+margin-right:75%;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+margin: 5px;
+font-size: 1.25em;
+font-family: FontAwesome;
+display: inline-block;
+content: "\f005";
+}
+
+.rating > .half:before {
+content: "\f089";
+position: absolute;
+}
+
+.rating > label {
+color: #ddd;
+float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+ @media screen and (max-width: 800px) {
+  .rating{
+    width:100% ;
+    margin-right:75%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+
+</head>
+<div ng-app="review" id="det">
+    <div>
+        <div class="container">
+
+            <table class="table">
+               
+                <tr>
+                        <td><h2>Name</h2></td>
+                        <td><h2>{{place.name}}</h2></td>
+                </tr>
+                <tr>
+                        <td><h2>Type</h2></td>
+                        <td><h2>{{place.description}}</h2></td>
+                </tr>
+                <tr>
+                        <td><h2>Rating</h2></td>
+                        <td><h2>{{rate| number: 2}}</h2></td>
+                </tr>
+               
+            </table>
+        </div>
+
+       
+        <div>
+            <a href="#!/">
+                <button type="button" class="btn btn-primary button">Back</button></a>
+           
+        </div>
+    </div>
+
+<!--User Input-->
+
+
+        <form action="#" ng-submit="addcomment()" name="myform" novalidate>
+                <div class="form-group ">
+        <h3 style="margin-left:8%;"> Give Your Ratings Here:</h3>
+    <fieldset class="rating">
+<input type="radio" id="star5" ng-model="rating" ng-value="5" name="ratingstar" required/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+<input type="radio" id="star4half" ng-model="rating" ng-value="4.5" name="ratingstar" required /><label class="half" for="star4half" title="Almost awesome - 4.5 stars"></label>
+<input type="radio" id="star4" ng-model="rating" ng-value="4" name="ratingstar" required /><label class = "full" for="star4" title="Great - 4 stars"></label>
+<input type="radio" id="star3half" ng-model="rating" ng-value="3.5" name="ratingstar" required /><label class="half" for="star3half" title="Almost great - 3.5 stars"></label>
+    <input type="radio" id="star3" ng-model="rating" ng-value="3" name="ratingstar" required /><label class = "full" for="star3" title="Good - 3 stars"></label>
+<input type="radio" id="star2half" ng-model="rating" ng-value="2.5" name="ratingstar" required /><label class="half" for="star2half" title="Almost good - 2.5 stars"></label>
+<input type="radio" id="star2" ng-model="rating" ng-value="2" name="ratingstar" required /><label class = "full" for="star2" title="Average - 2 stars"></label>
+<input type="radio" id="star1half" ng-model="rating" ng-value="1.5" name="ratingstar" required /><label class="half" for="star1half" title="Almost Average - 1.5 stars"></label>
+<input type="radio" id="star1" ng-model="rating" ng-value="1" name="ratingstar" required /><label class = "full" for="star1" title="Not good - 1 star"></label>
+<input type="radio" id="starhalf" ng-model="rating" ng-value="0.5" name="ratingstar" required /><label class="half" for="starhalf" title="Bad - 0.5 stars"></label>
+    </fieldset>
+    <h3 style="margin-left:8%;"> <i class="fa fa-comment-o" style="font-size:24px"></i>  Leave Your Comments Here:</h3>    
+<textarea class="form-control textbox" ng-model="usercomment" name="usercomment" id="comm" cols="90" rows="5" maxlength="400" style="resize:none" required></textarea>
+<br>
+<button type="submit" class="btn btn-primary post" ng-disabled="myform.usercomment.$invalid || myform.ratingstar.$invalid">Post</button>
+</div>
+</form>
+
+<h4 style="margin-left:8%;"> Comments:</h4>
+<div class="container">
+    <ul class="list-group">
+    <li class="list-group-item"  ng-repeat="comment in comments track by $index"><b>Rating</b> : {{place.rating[$index]}}Stars<br><b>Feedback</b> : {{comment}}</li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,9 @@
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc83"},"code":"LSS","name":"Lassi Shop","description":"Pure Veg","rating":[{"$numberInt":"5"}],"comments":["Best shakes and juices"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc84"},"code":"ADB","name":"Apna Dhaba","description":"Veg/Non-Veg","rating":[{"$numberInt":"5"},{"$numberInt":"3"}],"comments":["Amazing food","Awesome"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc85"},"code":"CNV","name":"China Valley","description":"Veg/Non-Veg","rating":[{"$numberInt":"4"}],"comments":["Affordable Chinese food"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc86"},"code":"PDB","name":"Punjabi Dhaba","description":"Pure Veg","rating":[{"$numberInt":"4"}],"comments":["Good for Pure Veg"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc87"},"code":"TRM","name":"Tarama","description":"Veg/Non-Veg","rating":[{"$numberInt":"5"}],"comments":["Best non-veg near VIT"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc88"},"code":"DSH","name":"Dosa Hut","description":"Pure Veg","rating":[{"$numberInt":"3"}],"comments":["Creative Dosas"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc89"},"code":"LSR","name":"Limra Star","description":"Veg/Non-Veg","rating":[{"$numberDouble":"3.5"}],"comments":["Many Smokers"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc8a"},"code":"SDB","name":"Saleem Dhaba","description":"Veg/Non-Veg","rating":[{"$numberDouble":"3.5"}],"comments":["Amazing Baasha Roll"]}
+{"_id":{"$oid":"5bc17cdefd4a89686fc3bc82"},"code":"LSU","name":"Limra Student","description":"Veg/Non-Veg","rating":[{"$numberInt":"4"}],"comments":["very good double egg double chicken roll"]}
