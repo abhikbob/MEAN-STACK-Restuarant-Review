@@ -1,6 +1,8 @@
 # MEAN-STACK-Restuarant-Review
 A simple restaurant review site made with MEAN Stack
 
+# Online access
+https://foodie-reviews.herokuapp.com/#!/
 
 
 # Setup
@@ -14,5 +16,5 @@ A simple restaurant review site made with MEAN Stack
 
 
 # Developers
-Abhik Bhattacharya 17BIT0276
+Abhik Bhattacharya 17BIT0276<br>
 Prateek Agarwal 17BIT0198
